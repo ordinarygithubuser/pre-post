@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: hsh.swa.ocl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: hsh.swa.ocl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
+ org.eclipse.xtext.xbase
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: hsh.swa.ocl,
+ hsh.swa.ocl.services,
+ hsh.swa.ocl.oCL,
+ hsh.swa.ocl.oCL.impl,
+ hsh.swa.ocl.oCL.util,
+ hsh.swa.ocl.serializer,
+ hsh.swa.ocl.parser.antlr,
+ hsh.swa.ocl.parser.antlr.internal,
+ hsh.swa.ocl.validation,
+ hsh.swa.ocl.formatting,
+ hsh.swa.ocl.jvmmodel

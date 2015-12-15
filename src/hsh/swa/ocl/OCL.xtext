@@ -1,0 +1,29 @@
+grammar hsh.swa.ocl.OCL with org.eclipse.xtext.xbase.Xbase
+
+generate oCL "http://www.swa.hsh/ocl/OCL"
+
+OCL:
+	imports = XImportSection?
+	(contexts += Context)*;
+	
+Context:
+	'context' type = JvmParameterizedTypeReference '{' 
+		(operations += Operation)*
+	'}';
+
+Operation:
+	signature = OperationSignature '{'
+		(constraints += Constraint)*
+	'}';
+
+OperationSignature:
+	name = ID '(' (params += FullJvmFormalParameter)* ')' type = JvmTypeReference;
+	
+Constraint:
+	PreConstraint | PostConstraint;
+	
+PreConstraint:
+	'pre' body = XExpression;
+
+PostConstraint:
+	'post' body = XExpression;

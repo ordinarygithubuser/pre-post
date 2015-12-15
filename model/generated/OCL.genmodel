@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/hsh.swa.ocl/src-gen" editDirectory="/hsh.swa.ocl.edit/src"
+    editorDirectory="/hsh.swa.ocl.editor/src" modelPluginID="hsh.swa.ocl" forceOverwrite="true"
+    modelName="OCL" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="hsh.swa.ocl.edit"
+    editorPluginID="hsh.swa.ocl.editor" runtimeVersion="2.10" usedGenPackages="platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel#//xtype">
+  <genPackages prefix="OCL" basePackage="hsh.swa.ocl" disposableProviderFactory="true"
+      fileExtensions="ocl" ecorePackage="OCL.ecore#/">
+    <genClasses ecoreClass="OCL.ecore#//OCL">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCL.ecore#//OCL/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCL.ecore#//OCL/contexts"/>
+    </genClasses>
+    <genClasses ecoreClass="OCL.ecore#//Context">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCL.ecore#//Context/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCL.ecore#//Context/operations"/>
+    </genClasses>
+    <genClasses ecoreClass="OCL.ecore#//Operation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCL.ecore#//Operation/signature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCL.ecore#//Operation/constraints"/>
+    </genClasses>
+    <genClasses ecoreClass="OCL.ecore#//OperationSignature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCL.ecore#//OperationSignature/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCL.ecore#//OperationSignature/params"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCL.ecore#//OperationSignature/type"/>
+    </genClasses>
+    <genClasses ecoreClass="OCL.ecore#//Constraint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OCL.ecore#//Constraint/body"/>
+    </genClasses>
+    <genClasses ecoreClass="OCL.ecore#//PreConstraint"/>
+    <genClasses ecoreClass="OCL.ecore#//PostConstraint"/>
+  </genPackages>
+</genmodel:GenModel>
